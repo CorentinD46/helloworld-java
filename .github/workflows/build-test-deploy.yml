@@ -1,12 +1,13 @@
 name: build-test-deploy
 
 on:
+  workflow_dispatch: 
   push:
     branches: [main]
 
 jobs:
   build:
-    name: Build and Cache Dependencies
+    name: Build app
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
