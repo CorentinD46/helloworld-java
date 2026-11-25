@@ -19,6 +19,8 @@ jobs:
         uses: actions/setup-java@v6.2.0
         with:
           java-version: '17'
-      - run: mvn clean package -DskipTests
+          distribution: 'temurin'
+      - name: Build maven sans les tests
+        run: mvn clean package -DskipTests
 
 
